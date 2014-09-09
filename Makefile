@@ -1,8 +1,8 @@
 ifeq ($(OS),Windows_NT)
 # initialize paths to windows tools
 MSIM_PATH = /cygdrive/c/modelsim_dlx_10.3/win32pe
-QUARTUS_PATH = /cygdrive/c/altera/14.0a10/quartus/bin64
-IP_GEN_PATH = /cygdrive/c/altera/14.0a10/quartus/sopc_builder/bin
+QUARTUS_PATH = /cygdrive/c/altera/14.0/quartus/bin64
+IP_GEN_PATH = /cygdrive/c/altera/14.0/quartus/sopc_builder/bin
 ROOT = ..
 
 TOOL_ROOT := $(subst /cygdrive/c,c:,$(ROOT))
@@ -11,8 +11,8 @@ PY = python3
 else
 # initialize paths to linux tools
 MSIM_PATH = /tools/modelsim/modelsim_10.3/modelsim_dlx/bin
-QUARTUS_PATH = /tools/altera/quartus_14.0a10.0.368/quartus/bin
-IP_GEN_PATH = /tools/altera/quartus_14.0a10.0.368/quartus/sopc_builder/bin
+QUARTUS_PATH = /tools/altera/quartus_14.0/quartus/bin
+IP_GEN_PATH = /tools/altera/quartus_14.0/quartus/sopc_builder/bin
 ROOT = ..
 
 TOOL_ROOT = $(ROOT)
