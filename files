@@ -1,0 +1,22 @@
+# list of compile switches to be included with the VLOG command
++incdir+$(ROOT)/myinclude1/
+
+# flat list of all the files needed for a given project (both synthesizable and otherwise)
+# note that the "$(ROOT)" variable should be defined in the Makefile
+
+###########################################################################################################
+
+# QSYS project file (currently only works for FIFOs, PLLs and counter IP cores; 
+# more compilcated cores require using TCL scripts)
+$(ROOT)/mysystem1.qsys
+
+# QSYS generated compile script
+$(ROOT)/myip1/msim_setup.tcl
+
+# note that if the "myfile1" module needs access to either the "mysystem1.qsys" or 
+# "myip1/msim_setup.tcl" systems, include the following comment clauses just before
+# the module declaration:
+# // #REQUIRE mysystem1.qsys
+# // #REQUIRE ip0
+# module myfile1();
+$(ROOT)/myfile1.v
